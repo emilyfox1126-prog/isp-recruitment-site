@@ -1,0 +1,178 @@
+/* =========================
+   BASE STYLES
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Montserrat:wght@600;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.site-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(11, 31, 59, 0.9);
+}
+
+.logo {
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.nav-cta {
+  background: #C9A227;
+  color: #0B1F3B;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 120px 24px 60px;
+  position: relative;
+
+  /* NEW: Background image */
+  background-image: url("https://illinoistrooper.com/application/files/6917/8127/8392/H08A7025.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  /* stronger law enforcement tone */
+  background: linear-gradient(
+    90deg,
+    rgba(11,31,59,0.95) 0%,
+    rgba(11,31,59,0.75) 45%,
+    rgba(11,31,59,0.35) 100%
+  );
+}
+
+.hero-content {
+  position: relative;
+  max-width: 800px;
+ color: #ffffff;
+}
+
+.hero-kicker {
+  color: #C9A227;
+  letter-spacing: 2px;
+  font-size: 12px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.hero-title {
+ font-family: "Montserrat", sans-serif;
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  opacity: 0.9;
+  margin-bottom: 30px;
+  max-width: 650px;
+  line-height: 1.6;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 10px 25px rgba(201, 162, 39, 0.25);
+}
+
+.btn {
+  padding: 14px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.btn-primary {
+  background: #C9A227;
+  color: #0B1F3B;
+}
+
+.btn-secondary {
+  border: 1px solid white;
+  color: white;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 32px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav {
+    display: none;
+  }
+}
